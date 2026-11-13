@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papaya Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>🍈 Papaya Detector</h1>
+    <p>Sistem Pendeteksi Kematangan Buah Pepaya</p>
+</header>
+
+<main>
+<section class="container">
+    <h2>Data Pemeriksaan Buah</h2>
+
+    <label for="nama">Nama Pengguna</label>
+    <input type="text" id="nama" placeholder="Masukkan nama Anda">
+
+    <label for="jenis">Jenis Pepaya</label>
+    <input type="text" id="jenis" placeholder="Contoh: Pepaya California">
+
+    <label for="imageInput">Upload Foto Pepaya</label>
+    <input type="file" id="imageInput" accept="image/*">
+    <img id="preview" alt="Pratinjau foto pepaya">
+
+    <label for="warna">Warna Kulit Pepaya</label>
+    <select id="warna">
+        <option value="">Pilih warna</option>
+        <option value="Hijau">Hijau</option>
+        <option value="Hijau Kekuningan">Hijau Kekuningan</option>
+        <option value="Kuning">Kuning</option>
+        <option value="Oranye">Oranye</option>
+    </select>
+
+    <label for="kondisi">Kondisi Buah</label>
+    <select id="kondisi">
+        <option value="">Pilih kondisi</option>
+        <option value="Keras">Keras</option>
+        <option value="Sedikit Lunak">Sedikit Lunak</option>
+        <option value="Lunak">Lunak</option>
+    </select>
+
+    <label for="catatan">Catatan Tambahan</label>
+    <textarea id="catatan" placeholder="Tuliskan kondisi buah..."></textarea>
+
+    <button id="detectButton" type="button">Deteksi Kematangan</button>
+
+    <div id="result" class="result" aria-live="polite">
+        <h3>Hasil Deteksi</h3>
+        <h2 id="status"></h2>
+        <p id="description"></p>
+        <button id="saveButton" type="button">Simpan Hasil</button>
+    </div>
+</section>
+
+<section class="container">
+    <h2>Riwayat Deteksi</h2>
+    <input type="search" id="search" placeholder="Cari nama pengguna, jenis, atau hasil...">
+    <div id="history"></div>
+</section>
+</main>
+
+<footer><p>© 2026 Papaya Detector</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
